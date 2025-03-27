@@ -1,0 +1,8 @@
+{% load static %}
+
+<h2>{{ object.titre }}</h2>
+<p>{{ object.contenu }}</p>
+<img src="{{ object.image.url }}" alt="Image">
+<p>Publié le {{ object.date_publication }}</p>
+<a href="{% url 'article_edit' object.pk %}">Modifier</a>
+<a href="{% url 'article_delete' object.pk %}">Supprimer</a>
